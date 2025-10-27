@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe — Monu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <header>
+        <h1>Tic Tac Toe — Web Version</h1>
+        <div class="controls">
+          <button class="btn" id="undoBtn">Undo</button>
+          <button class="btn" id="resetBtn">Reset</button>
+          <button class="btn primary" id="newGameBtn">New Game</button>
+        </div>
+      </header>
+
+      <div class="board-wrap">
+        <div>
+          <div id="board" class="board" aria-label="Tic Tac Toe board" role="grid"></div>
+          <footer>
+            <small>Click any cell or use keyboard (Arrow keys + Enter) to play.</small>
+            <div>
+              <label>Mode:</label>
+              <select id="modeSelect" class="btn">
+                <option value="pvp">Player vs Player</option>
+                <option value="pvc">Player vs Computer (Easy)</option>
+              </select>
+            </div>
+          </footer>
+        </div>
+
+        <aside class="panel">
+          <div class="status">Current turn</div>
+          <div id="turnDisplay" class="big">X</div>
+
+          <div class="scores">
+            <div class="score">
+              <div>Player X</div>
+              <div id="xScore">0</div>
+            </div>
+            <div class="score">
+              <div>Player O</div>
+              <div id="oScore">0</div>
+            </div>
+            <div class="score">
+              <div>Draws</div>
+              <div id="dScore">0</div>
+            </div>
+          </div>
+
+          <div class="last">
+            <p>Last game:</p>
+            <div id="lastResult">—</div>
+          </div>
+
+          <div class="btns">
+            <button class="btn" id="hintBtn">Hint</button>
+            <button class="btn" id="aiMoveBtn">Let Computer Move</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
